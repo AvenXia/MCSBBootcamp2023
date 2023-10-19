@@ -21,10 +21,10 @@ alpha = sqrt(2*D*dt);
 tCapture = zeros(NSample,1);
 
 % set up figure
-figure(1); clf; hold on; box on;
-xlabel('x (um)'); ylabel('y (um)')
-set(gca,'xlim', [-L/2,L/2],'ylim',[-L/2,L/2]);
-plot(NPCLocation(1), NPCLocation(2),'or','markerfacecolor','r','markersize',10);
+% figure(1); clf; hold on; box on;
+% xlabel('x (um)'); ylabel('y (um)')
+% set(gca,'xlim', [-L/2,L/2],'ylim',[-L/2,L/2]);
+% plot(NPCLocation(1), NPCLocation(2),'or','markerfacecolor','r','markersize',10);
 
 %% Simulate!
 
@@ -79,6 +79,7 @@ toc % report the time
 
 %% analyze results
 
-figure(2); clf; hold on; box on;
-histogram(tCapture)
+% figure(2); clf; hold on; box on;
+% histogram(tCapture)
 %set(gca,'yscale','log')
+display(mean(tCapture));
